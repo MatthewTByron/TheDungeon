@@ -1,0 +1,16 @@
+C:\Users\matthew\Programming\TheDungeon\bin\Debug\net5.0\TheDungeon.exe
+C:\Users\matthew\Programming\TheDungeon\bin\Debug\net5.0\TheDungeon.deps.json
+C:\Users\matthew\Programming\TheDungeon\bin\Debug\net5.0\TheDungeon.runtimeconfig.json
+C:\Users\matthew\Programming\TheDungeon\bin\Debug\net5.0\TheDungeon.runtimeconfig.dev.json
+C:\Users\matthew\Programming\TheDungeon\bin\Debug\net5.0\TheDungeon.dll
+C:\Users\matthew\Programming\TheDungeon\bin\Debug\net5.0\ref\TheDungeon.dll
+C:\Users\matthew\Programming\TheDungeon\bin\Debug\net5.0\TheDungeon.pdb
+C:\Users\matthew\Programming\TheDungeon\obj\Debug\net5.0\TheDungeon.csprojAssemblyReference.cache
+C:\Users\matthew\Programming\TheDungeon\obj\Debug\net5.0\TheDungeon.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\matthew\Programming\TheDungeon\obj\Debug\net5.0\TheDungeon.AssemblyInfoInputs.cache
+C:\Users\matthew\Programming\TheDungeon\obj\Debug\net5.0\TheDungeon.AssemblyInfo.cs
+C:\Users\matthew\Programming\TheDungeon\obj\Debug\net5.0\TheDungeon.csproj.CoreCompileInputs.cache
+C:\Users\matthew\Programming\TheDungeon\obj\Debug\net5.0\TheDungeon.dll
+C:\Users\matthew\Programming\TheDungeon\obj\Debug\net5.0\ref\TheDungeon.dll
+C:\Users\matthew\Programming\TheDungeon\obj\Debug\net5.0\TheDungeon.pdb
+C:\Users\matthew\Programming\TheDungeon\obj\Debug\net5.0\TheDungeon.genruntimeconfig.cache
