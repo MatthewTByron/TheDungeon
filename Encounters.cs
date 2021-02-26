@@ -22,19 +22,35 @@ namespace TheDungeon
 
         public static void BasicFightEncounter()
         {
+            Console.Clear();
             Console.WriteLine("You turn the corner and there you see a hulking beast...");
             Console.ReadKey();
             Combat(true, "", 0, 0);
         }
 
+        public static void WizardEcounter()
+        {
+            Console.Clear();
+            Console.WriteLine("The door slowly creaks open as you peer int the dark room. You see a tall man with a ");
+            Console.WriteLine("long beard looking at a large tome.");
+            Console.ReadKey();
+            Combat(false, "Dark Wizrd", 4, 2);
+        }
+        
+
         //Encounter Tools
         public static void RandomEncounter()
         {
-            switch(rand.Next(0, 1))
+            switch(rand.Next(0, 2))
             {
                 case 0:
                 {
                     BasicFightEncounter();
+                    break;
+                }
+                case 1:
+                {
+                    WizardEcounter();
                     break;
                 }
             }
@@ -146,6 +162,15 @@ namespace TheDungeon
                         }
                     }
                     Console.ReadKey();
+                }
+                if (Program.currentPlayer.health <= 0)
+                {
+                    //Player Death
+                    Console.WriteLine("As the " + n + " stands tall and comes down to strike. You have been slain by the mighty " + n);
+                    Console.ReadKey();
+                    Console.Clear();
+                    Console.WriteLine("GAME OVER!");
+                    System.Environment.Exit(0);
                 }
                 Console.ReadKey();
                 
