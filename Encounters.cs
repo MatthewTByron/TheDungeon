@@ -64,8 +64,8 @@ namespace TheDungeon
             if (random)
             {
                 n = GetName();
-                p = rand.Next(1, 5);
-                h = rand.Next(1, 8);
+                p = Program.currentPlayer.GetPower();
+                h = Program.currentPlayer.GetHealth();
             }
             else
             {
@@ -88,14 +88,14 @@ namespace TheDungeon
                 if (input.ToLower() == "a" ||input.ToLower() == "attack")
                 {
                     //Attack
-                    Console.WriteLine("With haste you surge forth, your sword dancing in flying in your hands! The "+ n +" strikes you as you pass.");
+                    Console.WriteLine("With haste you surge forth, your sword flying in your hands! The "+ n +" strikes you as you pass.");
                     int damage = p - Program.currentPlayer.armorValue;
                     if (damage < 0)
                     {
                         damage = 0;
                     }
                     int attack = rand.Next(1, Program.currentPlayer.weaponValue) + rand.Next(1, 4);
-                    Console.WriteLine("You lose " + damage + " health and deal " + attack + " damage");
+                    Console.WriteLine("You lose " + damage + " health and deal " + attack + " damage.");
                     Program.currentPlayer.health -= damage;
                     h -= attack;
                 }
