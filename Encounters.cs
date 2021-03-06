@@ -102,7 +102,7 @@ namespace TheDungeon
                 else if (input.ToLower() == "d" ||input.ToLower() == "Defend")
                 {
                     //Defend
-                    Console.WriteLine("As the  "+ n +" prepares to strike, you ready your sword ina defensive stance.");
+                    Console.WriteLine("As the  "+ n +" prepares to strike, you ready your sword in a defensive stance.");
                     int damage = (p/4) - Program.currentPlayer.armorValue;
                     if (damage < 0)
                     {
@@ -139,7 +139,7 @@ namespace TheDungeon
                     //Heal
                     if (Program.currentPlayer.potion == 0)
                     {
-                        Console.WriteLine("As you desperatly grasp for a potion in your bag, all that fee are empty glass flasks...");
+                        Console.WriteLine("As you desperatly grasp for a potion in your bag, all that feel are empty glass flasks...");
                         int damage = p - Program.currentPlayer.armorValue;
                         if (damage < 0)
                         {
@@ -177,7 +177,7 @@ namespace TheDungeon
                 
             }
             int c = rand.Next(10, 50);
-            Console.WriteLine("As you stand victorious over the " + ", its body dissovles into " + c + " gold coins!");
+            Console.WriteLine("As you stand victorious over the " + n + ", its body dissovles into " + c + " gold coins!");
             Program.currentPlayer.coins += c;
             Console.ReadKey();
         }
