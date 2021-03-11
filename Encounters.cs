@@ -131,7 +131,7 @@ namespace TheDungeon
                     {
                         Console.WriteLine("You use your crazy ninja moves to evade the " + n + " and you successfully escape!");
                         Console.ReadKey();
-                        //go to store
+                        Shop.LoadShop(Program.currentPlayer);
                     }
                 }                
                 else if (input.ToLower() == "h" ||input.ToLower() == "Heal")
@@ -176,7 +176,7 @@ namespace TheDungeon
                 
                 
             }
-            int c = rand.Next(10, 50);
+            int c = Program.currentPlayer.GetCoins();
             Console.WriteLine("As you stand victorious over the " + n + ", its body dissovles into " + c + " gold coins!");
             Program.currentPlayer.coins += c;
             Console.ReadKey();
