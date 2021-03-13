@@ -35,6 +35,7 @@ namespace TheDungeon
                 Console.WriteLine("(D)ifficulty Mod : $" + difP);
                 Console.WriteLine("=======================");
                 Console.WriteLine("(E)xit");
+                Console.WriteLine("(Q)uit");
                 Console.WriteLine();
                 Console.WriteLine();
                 Console.WriteLine(p.name + "'s Stats");
@@ -63,6 +64,10 @@ namespace TheDungeon
                 else if (input == "d" || input == "difficulty mod")
                 {
                     TryBuy("dif", difP, p);
+                }
+                else if (input == "q" || input == "quit")
+                {
+                    Program.Quit();
                 }
                 else if (input == "e" || input == "exit")
                 {

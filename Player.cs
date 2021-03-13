@@ -7,11 +7,13 @@ using System.Threading.Tasks;
 
 namespace TheDungeon
 {
+    [Serializable]
     public class Player
     {
         Random rand = new Random();
 
         public string name;
+        public int id;
         public int coins = 30000;
         public int health = 10;
         public int damage = 1;
