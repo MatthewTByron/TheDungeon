@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+//using System.Media;
 
 namespace TheDungeon
 {
@@ -37,6 +38,30 @@ namespace TheDungeon
             Console.WriteLine("The Dungeon!");
             Console.WriteLine("Name:");
             p.name = Console.ReadLine();
+            Console.WriteLine("Class: Mage  Archer  Warrior");
+            bool flag = false;
+            while (flag == false)
+            {
+                flag = true;
+                string input = Console.ReadLine().ToLower();
+                if (input == "mage")
+                {
+                    p.currentClass = Player.PlayerClass.Mage;
+                }
+                else if (input == "archer")
+                {
+                    p.currentClass = Player.PlayerClass.Archer;
+                }
+                else if (input == "warrior")
+                {
+                    p.currentClass = Player.PlayerClass.Warrior;
+                }
+                else
+                {
+                    System.Console.WriteLine("Please choose a existing class!");
+                    flag = false;
+                }
+            }
             p.id = i;
             Console.Clear();
             Console.WriteLine("You awake in a cold, stone, dark room. You feel dazed and are having trouble remembering");
@@ -65,7 +90,7 @@ namespace TheDungeon
         {
             BinaryFormatter binform = new BinaryFormatter();
             string path = "saves/" + currentPlayer.id.ToString() + ".level";
-            FileStream file = File.Open(path,FileMode.OpenOrCreate);
+            FileStream file = File.Open(path, FileMode.OpenOrCreate);
             binform.Serialize(file, currentPlayer);
             file.Close();
         }
@@ -92,14 +117,14 @@ namespace TheDungeon
             while (true)
             {
                 Console.Clear();
-                Console.WriteLine("Choose your Player:");
+                Print("Choose your Player:", 60);
             
                 foreach (Player p in players)
                 {
                     Console.WriteLine(p.id + ": " + p.name);
                 }
 
-                Console.WriteLine("Please input player name or id (id:# or playername). Additonally, 'create' will start a new save");            
+                Print("Please input player name or id (id:# or playername). Additonally, 'create' will start a new save");            
                 string[] data = Console.ReadLine().Split(':');
 
                 try
@@ -147,6 +172,18 @@ namespace TheDungeon
                     Console.ReadKey();   
                 }                                                    
             }            
+        }
+        public static void Print(string text, int speed = 40)
+        {
+            //SoundPlayer soundPlayer = new SoundPlayer("sounds/type.wav");
+            //soundPlayer.Playlooping();
+            foreach (char c in text)
+            {
+                Console.Write(c);
+                System.Threading.Thread.Sleep(speed);
+            }
+            //soundPlayer.Stop();
+            Console.WriteLine();
         }
     }
 }

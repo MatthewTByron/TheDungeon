@@ -94,7 +94,7 @@ namespace TheDungeon
                     {
                         damage = 0;
                     }
-                    int attack = rand.Next(1, Program.currentPlayer.weaponValue) + rand.Next(1, 4);
+                    int attack = rand.Next(0, Program.currentPlayer.weaponValue) + rand.Next(1, 4) + ((Program.currentPlayer.currentClass == Player.PlayerClass.Warrior) ? 2:0);
                     Console.WriteLine("You lose " + damage + " health and deal " + attack + " damage.");
                     Program.currentPlayer.health -= damage;
                     h -= attack;
@@ -116,7 +116,7 @@ namespace TheDungeon
                 else if (input.ToLower() == "r" ||input.ToLower() == "Run")
                 {
                     //Run
-                    if (rand.Next(0, 2) == 0)
+                    if (Program.currentPlayer.currentClass != Player.PlayerClass.Archer && rand.Next(0, 2) == 0)
                     {
                         Console.WriteLine("As you sprint aways from the "+ n +", its strike catches you in the back, sending you sprawling ");
                         int damage = p - Program.currentPlayer.armorValue;
@@ -150,7 +150,7 @@ namespace TheDungeon
                     else
                     {
                         Console.WriteLine("You reach into your bag and pull out a glowing, purple flask. You take a long drink.");
-                        int potionV = 5;
+                        int potionV = 5 + ((Program.currentPlayer.currentClass == Player.PlayerClass.Mage) ? + 4 : 0);
                         Console.WriteLine("You gain " + potionV + " health");
                         Program.currentPlayer.health += potionV;
                         Console.WriteLine("As you were occupied, the " + n + "advanced and struck.");

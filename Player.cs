@@ -23,6 +23,9 @@ namespace TheDungeon
 
         public int mods = 0;
 
+        public enum PlayerClass {Mage, Archer, Warrior};
+        public PlayerClass currentClass = PlayerClass.Warrior;
+
         public int GetHealth()
         {
             int upper = (2 * mods + 5);
